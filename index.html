@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Snake Game</title>
+</head>
+<body>
+    <div id="startScreen" class="overlay">
+        <h1>Welcome to Snake Game</h1>
+        <button id="startButton">Start Game</button>
+        <p>Use arrow keys to move. Eat food to grow and avoid walls!</p>
+        <div>
+            <label for="snakeColor">Snake Color:</label>
+            <input type="color" id="snakeColor" value="#008000">
+        </div>
+    </div>
+
+    <div id="gameOverScreen" class="overlay">
+        <h1>Game Over</h1>
+        <p>Your Score: <span id="finalScore"></span></p>
+        <p>High Score: <span id="highScoreDisplay"></span></p>
+        <button id="restartButton">Restart Game</button>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+    <div id="hud">
+        <p>Score: <span id="score">0</span></p>
+        <p>High Score: <span id="highScore">0</span></p>
+        <label>
+            Wall Pass: 
+            <input type="checkbox" id="wallPassToggle">
+        </label>
+    </div>
+
+    <audio id="eatSound" src="eat.mp3"></audio>
+    <audio id="gameOverSound" src="gameover.mp3"></audio>
+
+    <script src="app.js"></script>
+</body>
+</html>
